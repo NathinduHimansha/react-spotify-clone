@@ -1,0 +1,70 @@
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  height: 65px;
+  width: 97%;
+  background-color: #282828;
+  padding: 20px;
+}
+
+.footer_left {
+  /* fit to precentage in container */
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 300px;
+}
+
+.footer_center {
+  /* this is for parent flex */
+  flex: 0.4;
+  /* this is flex inside flex */
+  display: flex;
+  padding: 0 100px;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 300px;
+}
+
+.footer_right {
+  flex: 0.3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  min-width: 50px;
+}
+
+.footer_albumlogo {
+  object-fit: contain;
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+
+.footer_green {
+  color: #1ed15e;
+}
+
+.footer_songInfo > h4 {
+  margin-bottom: 5px;
+}
+.footer_songInfo > p {
+  font-size: 12px;
+}
+
+.footer_icon:hover,
+.footer_green:hover {
+  transition: transform 0.2s ease-in-out;
+  /* important means we can ovride others. in here material-ui is ovrriding it */
+  transform: scale(1.2) !important;
+}
+
+/* applyuing to slider class(givern by maretail ui) */
+.footer_right * .MuiSlider-root {
+  color: green;
+}
